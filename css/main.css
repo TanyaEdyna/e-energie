@@ -51,9 +51,9 @@ button {
   padding-right: 15px;
   outline: none;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 480px) {
   .container {
-    max-width: 320px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -76,7 +76,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 320px;
+  width: 480px;
   height: 100%;
   background-color: rgba(155, 164, 209, 0.3333333333);
   padding: 40px 0 38px 0;
@@ -176,7 +176,7 @@ button {
 }
 
 .title_wrap {
-  width: 320px;
+  width: 480px;
   height: 100%;
   padding: 60px 0 60px 0;
   text-align: center;
@@ -228,7 +228,7 @@ button {
 .services {
   background-color: #e1dfdf;
   padding: 32px 0 42px 0;
-  width: 320px;
+  width: 480px;
 }
 
 .company_title {
