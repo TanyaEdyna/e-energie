@@ -1,4 +1,5 @@
 .header {
+    width: 100%;
     @media screen and (min-width: 1200px) {
         background: linear-gradient(to bottom, rgba(155, 164, 209, 0.33), rgba(52, 60, 134, 255));
             background-image: linear-gradient(rgba(47, 48, 58, 0.775),
@@ -16,8 +17,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 480px;
-    height: 100%;
     background-color: #9ba4d155;
     padding: 40px 0 38px 0;
     @media screen and (min-width: 1200px) {
@@ -49,6 +48,11 @@
     
                    
 }
+.logo:hover,
+.logo:focus {
+    border: 1px solid #e28743;
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .nav_list {
     display: flex;
@@ -56,10 +60,13 @@
     gap: 14px;
     padding-left: 38px;
     margin-bottom: 28px;
+    list-style: none;
     @media screen and (min-width: 1200px) {
         flex-direction: row;
         padding-top: 64px;
-        gap: 32px;
+        gap: 64px;
+        margin: 0;
+        margin-right: 28px;
     }
     
  
@@ -76,13 +83,27 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
 }
+.nav_link:hover, 
+.nav_link:focus {
+    color: #e28743;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav_icon {
+    fill: currentColor;
+    @media screen and (min-width: 1200px) {
+        display: none;
+        
+    }
+}
+
 .nav_contacts {
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding-left: 38px;
+    list-style: none;
     @media screen and (min-width: 1200px) {
-        display: flex;
+        display: none;
         align-items: start;
             padding: 60px 60px 0 0;
     }
@@ -99,18 +120,19 @@
     color: #5567c1;
     @media screen and (min-width: 1200px) {
     color: #e2dfdf;
-
-}}
+}
+}
+.nav_contacts_link:hover {
+    color: #e28743;
+}
 .nav_contacts_icon {
     margin-right: 6px;
-    fill: #5567c1;
+    fill: currentColor;
     @media screen and (min-width: 1200px) {
-        fill: #e2dfdf;;
+        fill: currentColor;
     }
 }
 .title_wrap {
-    width: 480px;
-    height: 100%;
     padding: 60px 0 60px 0;
     text-align: center;
     background-color: #5567c1;
@@ -124,7 +146,7 @@
 }
 .name_company {
     color: #e2dfdf;
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: .02em;
@@ -144,10 +166,10 @@
 }
 .slogan {
     color: #e2dfdf;
-    font-size: 32px;
-        font-weight: 700;
-        line-height: 1.71;
-        letter-spacing: .02em;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.71;
+    letter-spacing: .02em;
 
        
     @media screen and (min-width: 1200px) {

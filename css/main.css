@@ -26,10 +26,6 @@ ul {
   padding-left: 0;
 }
 
-li {
-  list-style: none;
-}
-
 img {
   display: block;
   width: 100%;
@@ -62,6 +58,9 @@ button {
   }
 }
 
+.header {
+  width: 100%;
+}
 @media screen and (min-width: 1200px) {
   .header {
     background: linear-gradient(to bottom, rgba(155, 164, 209, 0.33), rgb(52, 60, 134));
@@ -76,8 +75,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 480px;
-  height: 100%;
   background-color: rgba(155, 164, 209, 0.3333333333);
   padding: 40px 0 38px 0;
 }
@@ -106,18 +103,27 @@ button {
   }
 }
 
+.logo:hover,
+.logo:focus {
+  border: 1px solid #e28743;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .nav_list {
   display: flex;
   flex-direction: column;
   gap: 14px;
   padding-left: 38px;
   margin-bottom: 28px;
+  list-style: none;
 }
 @media screen and (min-width: 1200px) {
   .nav_list {
     flex-direction: row;
     padding-top: 64px;
-    gap: 32px;
+    gap: 64px;
+    margin: 0;
+    margin-right: 28px;
   }
 }
 
@@ -136,15 +142,31 @@ button {
   }
 }
 
+.nav_link:hover,
+.nav_link:focus {
+  color: #e28743;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav_icon {
+  fill: currentColor;
+}
+@media screen and (min-width: 1200px) {
+  .nav_icon {
+    display: none;
+  }
+}
+
 .nav_contacts {
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding-left: 38px;
+  list-style: none;
 }
 @media screen and (min-width: 1200px) {
   .nav_contacts {
-    display: flex;
+    display: none;
     align-items: start;
     padding: 60px 60px 0 0;
   }
@@ -165,19 +187,21 @@ button {
   }
 }
 
+.nav_contacts_link:hover {
+  color: #e28743;
+}
+
 .nav_contacts_icon {
   margin-right: 6px;
-  fill: #5567c1;
+  fill: currentColor;
 }
 @media screen and (min-width: 1200px) {
   .nav_contacts_icon {
-    fill: #e2dfdf;
+    fill: currentColor;
   }
 }
 
 .title_wrap {
-  width: 480px;
-  height: 100%;
   padding: 60px 0 60px 0;
   text-align: center;
   background-color: #5567c1;
@@ -192,7 +216,7 @@ button {
 
 .name_company {
   color: #e2dfdf;
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.02em;
@@ -208,7 +232,7 @@ button {
 
 .slogan {
   color: #e2dfdf;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.71;
   letter-spacing: 0.02em;
@@ -226,12 +250,23 @@ button {
 }
 
 .services {
-  background-color: #e1dfdf;
-  padding: 32px 0 42px 0;
-  width: 480px;
+  background-color: rgba(225, 223, 223, 0.431372549);
+  width: 100%;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1200px) {
+  .services {
+    width: 100%;
+  }
+}
+
+.services_wrap {
+  position: relative;
+  padding: 42px 16px 42px 16px;
 }
 
 .company_title {
+  text-align: center;
   padding: 0;
   margin-bottom: 20px;
   color: #313c4f;
@@ -250,5 +285,281 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1200px) {
+  .company_description {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+}
+
+.services_title {
+  text-align: center;
+  color: #313c4f;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.service_description {
+  text-align: justify;
+  margin: 0;
+  color: #2c2e37;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .service_description {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.legislation {
+  width: 100%;
+}
+
+.legislation_wrap {
+  position: relative;
+  padding: 0 40px 40px;
+}
+
+.legislation_title {
+  text-align: center;
+  color: #313c4f;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.legislation_list {
+  list-style-type: square;
+}
+
+.legislation_link {
+  display: block;
+  text-align: justify;
+  color: #2c2e37;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .legislation_link {
+    font-size: 18px;
+  }
+}
+
+.legislation_link:hover,
+.legislation_link:focus {
+  color: #e28743;
+}
+
+.contact_form {
+  width: 100%;
+  padding: 54px;
+  background: linear-gradient(to bottom, rgba(155, 164, 209, 0.33), rgb(52, 60, 134));
+  background-image: linear-gradient(rgba(47, 48, 58, 0.775), rgba(47, 48, 58, 0.779)), url(../../images/bg-form.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 32px;
+}
+
+.form_title {
+  text-align: center;
+  color: #e2dfdf;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .form {
+    width: 572px;
+  }
+}
+
+.user_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_name {
+  margin-bottom: 22px;
+}
+
+.form_label {
+  color: #e2dfdf;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.02em;
+}
+
+.form_input {
+  padding: 16px 8px;
+  background-color: rgba(226, 223, 223, 0.2588235294);
+  color: #e2dfdf;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+
+.form_message {
+  background-color: rgba(226, 223, 223, 0.2588235294);
+  color: #e2dfdf;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 42px;
+}
+
+.user_email {
+  margin-bottom: 42px;
+}
+
+.form_btn {
+  padding: 16px 8px;
+  background-color: #e28743;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  color: #e2dfdf;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.71;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 350ms var(--cubic), background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form_btn:hover, .form_btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.form_btn:active {
+  transform: translateY(2px) translateX(2px);
+  box-shadow: 2px 4px 0 transparent;
+}
+
+.footer_title {
+  text-align: center;
+  color: #313c4f;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.footer_list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  list-style: none;
+}
+@media screen and (min-width: 1200px) {
+  .footer_list {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer_item {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.address_subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: #313c4f;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.address_description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: #313c4f;
+}
+
+.footer_icon {
+  margin-right: 4px;
+  fill: #e28743;
+}
+
+.address_wrap {
+  display: flex;
+  align-items: start;
+}
+
+.t_label_block {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #313c4f;
+  padding: 18px;
+}
+
+.t_made {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: #e2dfdf;
+  margin-right: 8px;
+}
+
+.t_icon {
+  fill: #e2dfdf;
+}
+
+.t_label {
+  font-size: 12px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: #e2dfdf;
+  font-weight: lighter;
+}
+
+.t_wrap {
+  padding: 6px 12px;
+  border-radius: 22px 0;
+  outline: 1px solid #e2dfdf;
 }/*# sourceMappingURL=main.css.map */
