@@ -60,22 +60,17 @@ button {
 
 .header {
   width: 100%;
-}
-@media screen and (min-width: 1200px) {
-  .header {
-    background: linear-gradient(to bottom, rgba(155, 164, 209, 0.33), rgb(52, 60, 134));
-    background-image: linear-gradient(rgba(47, 48, 58, 0.775), rgba(47, 48, 58, 0.779)), url("../images/bg-hero.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+  background: linear-gradient(to bottom, rgba(155, 164, 209, 0.131), rgb(52, 60, 134));
+  background-image: linear-gradient(rgba(18, 28, 174, 0.151), rgb(11, 21, 133)), url("../images/bg-hero.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .header_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgba(155, 164, 209, 0.3333333333);
   padding: 40px 0 38px 0;
 }
 @media screen and (min-width: 1200px) {
@@ -132,19 +127,33 @@ button {
   font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: #5968b1;
+  color: #fff8f8;
 }
 @media screen and (min-width: 1200px) {
   .nav_link {
     font-size: 28px;
-    color: #e2dfdf;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   }
 }
 
 .nav_link:hover,
 .nav_link:focus {
+  position: relative;
   color: #e28743;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav_link:hover::after,
+.nav_link:focus::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #e28743;
+  left: 0;
+  bottom: -6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -179,14 +188,8 @@ button {
   font-size: 16px;
   line-height: 1.16;
   letter-spacing: 0.02em;
-  color: #5567c1;
+  color: #fff8f8;
 }
-@media screen and (min-width: 1200px) {
-  .nav_contacts_link {
-    color: #e2dfdf;
-  }
-}
-
 .nav_contacts_link:hover {
   color: #e28743;
 }
@@ -372,8 +375,8 @@ button {
 .contact_form {
   width: 100%;
   padding: 54px;
-  background: linear-gradient(to bottom, rgba(155, 164, 209, 0.33), rgb(52, 60, 134));
-  background-image: linear-gradient(rgba(47, 48, 58, 0.775), rgba(47, 48, 58, 0.779)), url(../images/bg-form.jpeg);
+  background: linear-gradient(to bottom, rgba(155, 164, 209, 0.197), rgb(52, 60, 134));
+  background-image: linear-gradient(rgba(47, 48, 58, 0.529), rgba(47, 48, 58, 0.495)), url(../images/bg-form.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -422,20 +425,24 @@ button {
 
 .form_input {
   padding: 16px 8px;
-  background-color: rgba(226, 223, 223, 0.2588235294);
-  color: #e2dfdf;
+  background-color: rgba(226, 223, 223, 0.5607843137);
+  color: #2c2e37;
   font-size: 14px;
   outline: none;
   border: none;
   border-radius: 2px;
+  font: inherit;
 }
 
 .form_message {
-  background-color: rgba(226, 223, 223, 0.2588235294);
-  color: #e2dfdf;
+  background-color: rgba(226, 223, 223, 0.5607843137);
+  color: #2c2e37;
   font-size: 14px;
   text-align: left;
   margin-bottom: 42px;
+  resize: none;
+  padding: 8px;
+  font: inherit;
 }
 
 .user_email {

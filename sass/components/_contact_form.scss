@@ -1,9 +1,9 @@
 .contact_form {
     width: 100%;
     padding: 54px;
-    background: linear-gradient(to bottom, rgba(155, 164, 209, 0.33), rgba(52, 60, 134, 255));
-        background-image: linear-gradient(rgba(47, 48, 58, 0.775),
-                rgba(47, 48, 58, 0.779)),
+    background: linear-gradient(to bottom, rgba(155, 164, 209, 0.197), rgba(52, 60, 134, 255));
+        background-image: linear-gradient(rgba(47, 48, 58, 0.529),
+                rgba(47, 48, 58, 0.495)),
             url(../images/bg-form.jpeg);
         background-repeat: no-repeat;
         background-position: center;
@@ -49,22 +49,27 @@
     font-weight: 400;
     line-height: 1.71;
     letter-spacing: .02em;
+    
 }
 .form_input {
     padding: 16px 8px;
-    background-color: #e2dfdf42;
-    color: #e2dfdf;
+    background-color: #e2dfdf8f;
+    color: #2c2e37;
     font-size: 14px;
     outline: none;
     border: none;
     border-radius: 2px;
+    font: inherit;
 }
 .form_message {
-    background-color: #e2dfdf42;
-    color: #e2dfdf;
+    background-color: #e2dfdf8f;
+    color: #2c2e37;
     font-size: 14px;
     text-align: left;
     margin-bottom: 42px;
+    resize: none;
+    padding: 8px;
+    font: inherit;
 
 
 }
