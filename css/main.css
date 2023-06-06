@@ -370,6 +370,7 @@ button {
 .legislation_link:hover,
 .legislation_link:focus {
   color: #e28743;
+  font-weight: 600;
 }
 
 .contact_form {

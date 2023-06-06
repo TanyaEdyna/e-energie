@@ -23,19 +23,7 @@
 .legislation_list {
     list-style-type: square;
 }
-// .legislation_list::after {
-//         @media screen and (min-width: 1200px) {
-//                 content: "";
-//                     position: absolute;
-//                     display: block;
-//                     height: 2px;
-//                     width: 100%;
-//                     top: 616px;
-//                     background: linear-gradient(to right, transparent, #333d6c, transparent);
-            
-//         }
 
-// }
 .legislation_link {
     display: block;
     text-align: justify;
@@ -52,4 +40,5 @@
 .legislation_link:hover,
 .legislation_link:focus {
     color: #e28743;
+    font-weight: 600;
 }
